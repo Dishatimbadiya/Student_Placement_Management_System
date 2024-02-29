@@ -402,6 +402,6 @@ require_login();
     });
 </script>
 
-<script src="/WDW_A1/static/app.js"></script>
+<script src="/Student_placement_management/static/app.js"></script>
 
 <?php require_once "../helpers/footer.php"; ?>

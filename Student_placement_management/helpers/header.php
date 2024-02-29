@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/WDW_A1/static/style.css">
+    <link rel="stylesheet" href="/Student_placement_management/static/style.css">
 
     <!-- http://getbootstrap.com/docs/5.1/ -->
     <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -19,7 +19,7 @@
         integrity="sha512-bZAXvpVfp1+9AUHQzekEZaXclsgSlAeEnMJ6LfFAvjqYUVZfcuVXeQoN5LhD7Uw0Jy4NCY9q3kbdEXbwhZUmUQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- custom js -->
-    <script src="/WDW_A1/static/script.js"></script>
+    <script src="/Student_placement_management/static/script.js"></script>
     <style>
         body {
             height: 100%;

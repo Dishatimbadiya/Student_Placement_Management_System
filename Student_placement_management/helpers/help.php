@@ -5,7 +5,7 @@ function require_login()
 {
     if (!(isset($_SESSION["user_id"]))) {
         $_SESSION['login_message'] = 'Log in first!';
-        return header('location: /WDW_A1/home.php');
+        return header('location: /Student_placement_management/home.php');
     }
 }
 function filled_company_details()
@@ -24,15 +24,15 @@ function company_details_filled()
 
 function student_details_filled()
 {
-    if($_SESSION["user_type"]!="ss" && $_SESSION["user_type"]!="cc"){
-        $_SESSION['e_message']='you make your resume first after that you will able to apply to any company..   ';
+    if ($_SESSION["user_type"] != "ss" && $_SESSION["user_type"] != "cc") {
+        $_SESSION['e_message'] = 'you make your resume first after that you will able to apply to any company..   ';
         return header("Location: available_job.php");
     }
 }
 
 function edit_details()
 {
-    if($_SESSION("edit")=='TRUE'){
+    if ($_SESSION("edit") == 'TRUE') {
         return header('location: edit_profile.php');
     }
 }
@@ -40,7 +40,7 @@ function edit_details()
 function prevent_access_after_login()
 {
     if ((isset($_SESSION["user_id"]))) {
-        return header('location: /WDW_A1/home.php');
+        return header('location: /Student_placement_management/home.php');
     }
 }
 function generate_OTP($n)
@@ -60,25 +60,25 @@ function generate_OTP($n)
 
 use PHPMailer\PHPMailer\PHPMailer;
 
-function send_mail($to_email, $subject, $body)
-{
-    require_once("../PHPMailer/src/PHPMailer.php");
-    require_once("../PHPMailer/src/SMTP.php");
+// function send_mail($to_email, $subject, $body)
+// {
+//     require_once("../PHPMailer/src/PHPMailer.php");
+//     require_once("../PHPMailer/src/SMTP.php");
 
-    $mail = new PHPMailer(true);
-    $mail->isSMTP();
-    $mail->isHTML(true);
-    $mail->Host = 'smtp.gmail.com';
-    $mail->SMTPAuth = true;
-    $mail->Username = 'ultrafinance100@gmail.com';
-    $mail->Password = 'xoxipejlvmzibdbp';
-    $mail->SMTPSecure = 'ssl';
-    $mail->Port = 465;
+//     $mail = new PHPMailer(true);
+//     $mail->isSMTP();
+//     $mail->isHTML(true);
+//     $mail->Host = 'smtp.gmail.com';
+//     $mail->SMTPAuth = true;
+//     $mail->Username = 'ultrafinance100@gmail.com';
+//     $mail->Password = 'xoxipejlvmzibdbp';
+//     $mail->SMTPSecure = 'ssl';
+//     $mail->Port = 465;
 
-    $mail->setFrom('ultrafinance100@gmail.com');
-    $mail->addAddress($to_email);
-    $mail->Subject = $subject;
-    $mail->Body = $body;
+//     $mail->setFrom('ultrafinance100@gmail.com');
+//     $mail->addAddress($to_email);
+//     $mail->Subject = $subject;
+//     $mail->Body = $body;
 
-    $mail->send();
-}
+//     $mail->send();
+// }

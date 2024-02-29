@@ -61,15 +61,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if (!(password_verify($password, $result["hash"]))) {
             $error['username'] = WRONG_CREDS;
-        }
-        else if($result["user_type"]!='c' && $result["user_type"]!='cc'){
-            $error['username']= WRONG_CREDS;
-        } 
-        else {
+        } else if ($result["user_type"] != 'c' && $result["user_type"] != 'cc') {
+            $error['username'] = WRONG_CREDS;
+        } else {
             //
             session_start();
             $_SESSION["user_id"] = $result["id"];
-            $_SESSION["user_type"]=$result["user_type"];
+            $_SESSION["user_type"] = $result["user_type"];
             return header("location: ../features_company/profile.php");
         }
     }
